@@ -87,7 +87,7 @@ module Dry
       #
       # @api private
       def method_missing(*args, &block)
-        fmap do |value|
+        maybe do |value|
           value.public_send(*args, &block)
         end
       end
